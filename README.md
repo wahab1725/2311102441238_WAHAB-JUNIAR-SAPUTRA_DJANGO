@@ -6,7 +6,8 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
 
 **Ada apa saja di website ini?**
 
-- **Home Page**: yang akan menampilkan main portfolio
+- **apps pengguna**: membuat model pengguna
+- **apps berita**: membuat model berita
 
 ## Prerequisites
 
@@ -16,17 +17,33 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
 
 ## Installation
 
-1. Clone the repository
-
-```bash
-git clone https://github.com/wahab1725/2311102441238_WAHAB-JUNIAR-SAPUTRA_DJANGO.git
-cd 2311102441238_WAHAB-JUNIAR-SAPUTRA_DJANGO
+1. buka command prompt
+2. Arahkan ke folder tempat web kita berada
+3. setelah itu kita buat venv
 ```
-
-2. Run
-
-```bash
-python manage.py runserver
+py -m venv .venv
+```
+4. untuk mengaktifkannya, kita masuk ke folder env, masuk lagi ke folder Scripts, setelah itu kita ketik 
+```
+.venv\Scripts\activate
+```
+5. dan kemudian kita membuat project baru django 
+```
+django-admin startproject portofolio
+```
+6. setelah itu jika ingin membuat apps kita bisa mengetik
+```
+python manage.py startapp pengguna
+python manage.py startapp berita
+```
+7. serelah itu, untuk membuat migration kita dapat mengetikkan
+```
+python manage.py makemigrations pengguna
+python manage.py makemigrations berita
+```
+8. Setelah project dan apps telah dibuat dan untuk mengeceknya kita bisa mengetik 
+```
+py manage.py runserver
 ```
 
 
